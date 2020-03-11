@@ -1,8 +1,13 @@
+
 # Theory 1: Adding a positive and a negative number returns a positive number if the positive number was greater
 
 
 def add(x, y):
-    return x + y
+    #return x + y
+    if isinstance(x, str) or isinstance(y, str):
+        return 'error'
+    else:
+        return x + y
 
 
 def test_adding_positive_negative_numbers():
@@ -28,3 +33,9 @@ def test_adding_zero_to_whole_numbers():
     assert numb == -200
 
 
+# Negative test
+
+
+def test_adding_number_to_string():
+    output = add('foo', 2)
+    assert output == 'error'
