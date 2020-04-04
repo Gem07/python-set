@@ -1,48 +1,43 @@
-# Challenge 1:
+# Coin Challenge
 
 
-def add(penny, nickel, dime, quarter):
-	N = penny + nickel + dime + quarter
-	return N
+def test_sum_pennies():
+    user_input = '15'
+    numb_of_pennies = int(user_input)
+    assert numb_of_pennies == 15
 
 
-def multiply(value_of_coin, number_of_coins):
-	total_coin_value = value_of_coin * number_of_coins
-	return total_coin_value
-
-# Three possible outcomes
-# Outcome 1: player has exact number of coins
+def test_sum_nickels():
+    user_input = '20'
+    numb_of_nickels = int(user_input)
+    assert numb_of_nickels == 20
 
 
-def test_player_has_exact_number():
-	value_of_coin = 20
-	number_of_coins = 5
-	total_coin_value = multiply(value_of_coin, number_of_coins)
-	assert total_coin_value == 100
-	print(f'\n You won!!!🎉 You have exactly $1 😃')
-
-# Outcome 2: Player has more than enough number of coins
+def test_sum_dimes():
+    user_input = '40'
+    numb_of_dimes = int(user_input)
+    assert numb_of_dimes == 40
 
 
-def test_player_has_more_number_of_coins():
-	value_of_coin = 10
-	number_of_coins = 15
-	total_coin_value = multiply(value_of_coin, number_of_coins)
-	assert total_coin_value == 150
-
-	over = total_coin_value - 100
-	if total_coin_value > 100:
-		print(f'\n Sorry player, you have more than 100. You have {over}c more!')
-
-# Outcome 3: Player has less than enough number of coins
+def test_sum_quarters():
+    user_input = '25'
+    numb_of_quarters = int(user_input)
+    assert numb_of_quarters == 25
 
 
-def test_player_has_less_number_of_coins():
-	value_of_coin = 10
-	number_of_coins = 9
-	total_coin_value = multiply(value_of_coin, number_of_coins)
-	assert total_coin_value == 90
+def test_sum_all_coins():
+    user_input = '100'
+    numb_of_coins = int(user_input)
+    assert numb_of_coins == 100
 
-	under = total_coin_value - 100
-	if total_coin_value < 100:
-		print(f'\n Sorry player, you have less than 100. You have {under}c less! 🙁')
+
+def test_total_under_dollar():
+    user_input = '15'
+    value_under = int(user_input)
+    assert value_under == 15
+
+
+def test_total_over_dollar():
+    user_input = '22'
+    excess_value = int(user_input)
+    assert excess_value == 22
