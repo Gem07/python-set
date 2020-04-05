@@ -1,4 +1,4 @@
-# Coin Challenge
+print("~~~~~Coin Challenge~~~~~")
 
 
 def test_sum_pennies():
@@ -8,21 +8,21 @@ def test_sum_pennies():
 
 
 def test_sum_nickels():
-    user_input = '20'
+    user_input = '4'
     numb_of_nickels = int(user_input)
-    assert numb_of_nickels == 20
+    assert numb_of_nickels == 4
 
 
 def test_sum_dimes():
-    user_input = '40'
+    user_input = '4'
     numb_of_dimes = int(user_input)
-    assert numb_of_dimes == 40
+    assert numb_of_dimes == 4
 
 
 def test_sum_quarters():
-    user_input = '25'
+    user_input = '1'
     numb_of_quarters = int(user_input)
-    assert numb_of_quarters == 25
+    assert numb_of_quarters == 1
 
 
 def test_sum_all_coins():
